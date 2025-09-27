@@ -151,4 +151,5 @@ async def restart(ctx):
 if not TOKEN:
     print("ERROR: BOT_TOKEN not set. Export it in your shell with: export BOT_TOKEN='...'(mac/linux) or $env:BOT_TOKEN='...' (PowerShell)")
 else:
-    bot.run(TOKEN)
+   bot.run(os.getenv("DISCORD_TOKEN"))
+
