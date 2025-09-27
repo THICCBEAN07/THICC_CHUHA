@@ -1,1 +1,1 @@
-worker: python chuha.py
+worker: python Chuha.py
