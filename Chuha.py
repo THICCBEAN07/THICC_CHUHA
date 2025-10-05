@@ -39,7 +39,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix=["kek ", "k ", "K "], intents=intents, case_insensitive=True)
 
-guess_mgr = GuessManager("memes.json", fuzzy_threshold=0.70)
+guess_mgr = GuessManager("memes.json", fuzzy_threshold=0.90)
 score_mgr = ScoreManager("scores.json")
 
 class PlayAgainView(View):
@@ -152,5 +152,6 @@ if not TOKEN:
     print("ERROR: BOT_TOKEN not set. Export it in your shell with: export BOT_TOKEN='...'(mac/linux) or $env:BOT_TOKEN='...' (PowerShell)")
 else:
    bot.run(TOKEN)
+
 
 
